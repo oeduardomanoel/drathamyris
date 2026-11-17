@@ -1,0 +1,525 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-17T17:14:31.673Z",
+  "title": "Design System: Dra. Thamyris Dahas Daher · Cardiologista",
+  "extensions": {
+    "colorMeta": {
+      "navy": {
+        "role": "primary",
+        "displayName": "Marinho Consultório",
+        "canonical": "#0a3868",
+        "tonalRamp": [
+          "#132639",
+          "#0c4179",
+          "#115dac",
+          "#1578df",
+          "#4597ed",
+          "#7db6f2",
+          "#b5d5f8",
+          "#ecf2f9"
+        ]
+      },
+      "navy-ink": {
+        "role": "primary",
+        "displayName": "Marinho Tinta",
+        "canonical": "#08274f",
+        "tonalRamp": [
+          "#142439",
+          "#0c3b78",
+          "#1155ab",
+          "#176ede",
+          "#468eec",
+          "#7db0f2",
+          "#b5d2f7",
+          "#ecf1f8"
+        ]
+      },
+      "navy-deep": {
+        "role": "primary",
+        "displayName": "Marinho Fundo",
+        "canonical": "#072c55",
+        "tonalRamp": [
+          "#13253a",
+          "#0a3f7b",
+          "#0e5aae",
+          "#1375e2",
+          "#4395ef",
+          "#7bb4f4",
+          "#b4d4f9",
+          "#ecf2f9"
+        ]
+      },
+      "navy-hover": {
+        "role": "primary",
+        "displayName": "Marinho Ativo",
+        "canonical": "#0d4580",
+        "tonalRamp": [
+          "#142639",
+          "#0c4178",
+          "#115cab",
+          "#1778de",
+          "#4697ec",
+          "#7db6f2",
+          "#b5d5f7",
+          "#ecf2f8"
+        ]
+      },
+      "navy-night": {
+        "role": "primary",
+        "displayName": "Marinho Noite",
+        "canonical": "#061f3d",
+        "tonalRamp": [
+          "#132539",
+          "#0c3d79",
+          "#1157ac",
+          "#1671df",
+          "#4591ed",
+          "#7db2f2",
+          "#b5d3f8",
+          "#ecf2f9"
+        ]
+      },
+      "teal": {
+        "role": "secondary",
+        "displayName": "Teal Clínico",
+        "canonical": "#117a69",
+        "tonalRamp": [
+          "#153832",
+          "#107565",
+          "#17a68f",
+          "#1ed7ba",
+          "#4ce6ce",
+          "#81eedc",
+          "#b7f5eb",
+          "#ecf8f6"
+        ]
+      },
+      "teal-ink": {
+        "role": "secondary",
+        "displayName": "Teal Tinta",
+        "canonical": "#0b7068",
+        "tonalRamp": [
+          "#133936",
+          "#0c7970",
+          "#11aca0",
+          "#16dfcf",
+          "#45eddf",
+          "#7df2e9",
+          "#b5f8f2",
+          "#ecf9f8"
+        ]
+      },
+      "teal-bright": {
+        "role": "secondary",
+        "displayName": "Teal Luz",
+        "canonical": "#55c8b8",
+        "tonalRamp": [
+          "#1b322f",
+          "#20645b",
+          "#2e8f81",
+          "#3cb9a8",
+          "#65cdbf",
+          "#93dcd2",
+          "#c1ebe5",
+          "#eef6f5"
+        ]
+      },
+      "star": {
+        "role": "secondary",
+        "displayName": "Estrela",
+        "canonical": "#0e9185",
+        "tonalRamp": [
+          "#133936",
+          "#0c796f",
+          "#11ac9e",
+          "#16dfcd",
+          "#45edde",
+          "#7df2e8",
+          "#b5f8f2",
+          "#ecf9f7"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Chão Gelo",
+        "canonical": "#f6f8fa",
+        "tonalRamp": [
+          "#20262d",
+          "#2f4255",
+          "#435e79",
+          "#577a9d",
+          "#7c99b6",
+          "#a3b8cc",
+          "#cbd6e2",
+          "#f0f2f4"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#262626",
+          "#424242",
+          "#5e5e5e",
+          "#7a7a7a",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Névoa",
+        "canonical": "#e8eef5",
+        "tonalRamp": [
+          "#1d262f",
+          "#28405c",
+          "#395b84",
+          "#4a77ab",
+          "#7196c1",
+          "#9bb5d4",
+          "#c6d5e6",
+          "#eff2f5"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Filete",
+        "canonical": "#d7dfe8",
+        "tonalRamp": [
+          "#20262c",
+          "#304154",
+          "#455d78",
+          "#59789b",
+          "#7d97b5",
+          "#a4b6cb",
+          "#cbd6e1",
+          "#f0f2f4"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "#1b2a3e",
+        "tonalRamp": [
+          "#1d252f",
+          "#283f5c",
+          "#395983",
+          "#4a74ab",
+          "#7193c1",
+          "#9cb4d4",
+          "#c6d4e6",
+          "#eff2f5"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Tinta Suave",
+        "canonical": "#44546a",
+        "tonalRamp": [
+          "#21252b",
+          "#344051",
+          "#4a5b73",
+          "#607695",
+          "#8395af",
+          "#a8b5c7",
+          "#cdd5df",
+          "#f1f2f4"
+        ]
+      },
+      "on-navy": {
+        "role": "neutral",
+        "displayName": "Sobre Marinho",
+        "canonical": "#f5f7fa",
+        "tonalRamp": [
+          "#1f252e",
+          "#2c3e58",
+          "#3f587e",
+          "#5272a3",
+          "#7792bb",
+          "#a0b3cf",
+          "#c9d3e4",
+          "#f0f2f5"
+        ]
+      },
+      "on-navy-2": {
+        "role": "neutral",
+        "displayName": "Sobre Marinho Suave",
+        "canonical": "#b9c8da",
+        "tonalRamp": [
+          "#1f262d",
+          "#2e4057",
+          "#415c7b",
+          "#5577a0",
+          "#7a96b8",
+          "#a2b6ce",
+          "#cad5e3",
+          "#f0f2f5"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Só a manchete do hero; no celular escala pela unidade --u da comp (mínimo 25px, entrelinha 1,2)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Títulos de seção, 400 com palavras-chave em 700."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Títulos de serviço, itens da faixa, nomes."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Texto corrido, medida de 36 a 64ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Menu, datas, meta, perguntas do FAQ."
+      },
+      "brand-role": {
+        "displayName": "Brand role",
+        "purpose": "Só o 'Cardiologista' no logotipo; não é estilo de rótulo reutilizável."
+      }
+    },
+    "shadows": [
+      {
+        "name": "pill",
+        "value": "0 6px 18px -8px rgb(8 39 79 / 0.45)",
+        "purpose": "Pílula do WhatsApp."
+      },
+      {
+        "name": "soft",
+        "value": "0 10px 30px -12px rgb(8 39 79 / 0.28)",
+        "purpose": "Botão marinho em repouso."
+      },
+      {
+        "name": "soft-hover",
+        "value": "0 14px 34px -14px rgb(8 39 79 / 0.55)",
+        "purpose": "Botão marinho no hover."
+      },
+      {
+        "name": "card",
+        "value": "0 1px 2px rgb(8 39 79 / 0.06), 0 12px 32px -20px rgb(8 39 79 / 0.25)",
+        "purpose": "Cartões de depoimento."
+      },
+      {
+        "name": "card-open",
+        "value": "0 1px 2px rgb(8 39 79 / 0.06), 0 14px 36px -22px rgb(8 39 79 / 0.35)",
+        "purpose": "Item de FAQ aberto."
+      },
+      {
+        "name": "media",
+        "value": "0 30px 60px -40px rgb(8 39 79 / 0.45)",
+        "purpose": "Retrato no desktop."
+      },
+      {
+        "name": "map",
+        "value": "0 14px 40px -24px rgb(8 39 79 / 0.4)",
+        "purpose": "Mapa do endereço."
+      },
+      {
+        "name": "dock",
+        "value": "0 16px 36px -12px rgb(8 39 79 / 0.6)",
+        "purpose": "Barra fixa do celular."
+      },
+      {
+        "name": "badge-glass",
+        "value": "0 8px 22px -14px rgb(8 39 79 / 0.5)",
+        "purpose": "Selos sobre o retrato, com fundo rgb(228 242 248 / 0.88) e backdrop-filter blur(8px)."
+      },
+      {
+        "name": "top-rule",
+        "value": "0 1px 0 rgb(8 39 79 / 0.08)",
+        "purpose": "Filete inferior da barra fixa do topo."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Única curva do sistema, em toda transição e animação."
+      },
+      {
+        "name": "state",
+        "value": "0.2s–0.25s",
+        "purpose": "Hover/active de botões, pílula e linhas de serviço."
+      },
+      {
+        "name": "hero-settle",
+        "value": "1.4s; scale(1.06) saturate(0.85) brightness(1.04) -> none",
+        "purpose": "Chegada do retrato, uma vez."
+      },
+      {
+        "name": "badge-lift",
+        "value": "0.9s; translateY(10px) opacity 0.4 -> none; delays 0.35s / 0.5s",
+        "purpose": "Chegada escalonada dos selos."
+      },
+      {
+        "name": "cta-nudge",
+        "value": "2.4s; delay 1.6s; 1 iteração",
+        "purpose": "Balanço único do ícone do WhatsApp no botão do hero."
+      },
+      {
+        "name": "faq-rows",
+        "value": "grid-template-rows 0fr -> 1fr, 0.4s",
+        "purpose": "Abertura do painel do FAQ; ícone gira 45° em 0.35s."
+      },
+      {
+        "name": "dock",
+        "value": "translateY(140%) -> none 0.45s + opacity 0.3s",
+        "purpose": "Entrada da barra fixa no celular; com movimento reduzido, só opacidade 0.2s linear."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion",
+        "purpose": "Animações só em no-preference; scroll-behavior volta a auto em reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone-tight",
+        "value": "600px"
+      },
+      {
+        "name": "gutter",
+        "value": "640px"
+      },
+      {
+        "name": "tablet",
+        "value": "720px"
+      },
+      {
+        "name": "desktop",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação única de agendamento: pílula marinho com WhatsApp e seta, sempre seguida da nota 5,0.",
+      "html": "<div class=\"ds-act\"><a class=\"ds-cta\" href=\"#\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.2z\"/></svg><span>Agendar pelo WhatsApp</span><span class=\"ds-cta__arrow\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a><a class=\"ds-rating\" href=\"#\"><span class=\"ds-stars\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z\"/></svg><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z\"/></svg><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z\"/></svg><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z\"/></svg><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z\"/></svg></span><b>5,0</b> · 85 opiniões</a></div>",
+      "css": ".ds-act{font-family:'Biryani',system-ui,sans-serif;display:flex;flex-direction:column;align-items:flex-start;gap:16px}.ds-cta{display:inline-flex;align-items:center;gap:12px;height:60px;padding:0 28px 0 24px;border-radius:999px;background:var(--navy,#0a3868);color:#fff;font-size:1.0625rem;font-weight:700;letter-spacing:-0.01em;text-decoration:none;box-shadow:0 10px 30px -12px rgb(8 39 79 / .28);transition:background-color .25s cubic-bezier(.16,1,.3,1),box-shadow .25s cubic-bezier(.16,1,.3,1),transform .25s cubic-bezier(.16,1,.3,1)}.ds-cta__arrow{display:inline-flex;transition:transform .25s cubic-bezier(.16,1,.3,1)}.ds-cta:hover{background:var(--navy-hover,#0d4580);box-shadow:0 14px 34px -14px rgb(8 39 79 / .55)}.ds-cta:hover .ds-cta__arrow{transform:translateX(4px)}.ds-cta:active{transform:scale(.985)}.ds-cta:focus-visible{outline:3px solid var(--teal-bright,#55c8b8);outline-offset:3px}.ds-rating{display:inline-flex;align-items:center;gap:10px;color:var(--ink-2,#44546a);text-decoration:none;font-size:1rem}.ds-rating b{color:var(--navy-ink,#08274f);font-weight:700;font-size:1.15em}.ds-stars{display:inline-flex;gap:3px;color:var(--star,#0e9185)}"
+    },
+    {
+      "name": "Botão claro",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "Variante branca do botão principal, só sobre faixas marinho.",
+      "html": "<div class=\"ds-dark\"><a class=\"ds-cta-light\" href=\"#\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.2z\"/></svg><span>Agendar consulta</span><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a></div>",
+      "css": ".ds-dark{font-family:'Biryani',system-ui,sans-serif;background:var(--navy,#0a3868);padding:32px;border-radius:18px}.ds-cta-light{display:inline-flex;align-items:center;gap:12px;height:60px;padding:0 28px 0 24px;border-radius:999px;background:#fff;color:var(--navy-ink,#08274f);font-size:1.0625rem;font-weight:700;text-decoration:none;box-shadow:0 12px 30px -14px rgb(0 0 0 / .5);transition:background-color .25s cubic-bezier(.16,1,.3,1)}.ds-cta-light:hover{background:#e8f1fb}.ds-cta-light:focus-visible{outline:3px solid var(--teal-bright,#55c8b8);outline-offset:3px}"
+    },
+    {
+      "name": "Barra do topo com pílula do WhatsApp",
+      "kind": "nav",
+      "refersTo": "pill-whatsapp",
+      "description": "Barra branca fixa: marca à esquerda, menu de âncoras no desktop, pílula teal do WhatsApp à direita.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-brand\" href=\"#\"><span class=\"ds-brand__name\">Dra. Thamyris Dahas Daher</span><span class=\"ds-brand__role\">Cardiologista</span></a><nav class=\"ds-nav\"><a href=\"#\">Serviços</a><a href=\"#\">Sobre</a><a href=\"#\">Dúvidas</a></nav><a class=\"ds-pill-wa\" href=\"#\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.2z\"/></svg>WhatsApp</a></header>",
+      "css": ".ds-top{font-family:'Biryani',system-ui,sans-serif;display:flex;align-items:center;gap:32px;height:84px;padding:0 32px;background:#fff;box-shadow:0 1px 0 rgb(8 39 79 / .08)}.ds-brand{text-decoration:none;color:var(--navy-ink,#08274f)}.ds-brand__name{display:block;font-size:1.25rem;font-weight:400;line-height:1.05;letter-spacing:-0.015em}.ds-brand__role{display:block;margin-top:4px;font-size:.6875rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-2,#44546a)}.ds-nav{display:flex;gap:32px;margin-left:auto}.ds-nav a{padding:8px 0;color:var(--ink-2,#44546a);font-weight:600;font-size:.9375rem;text-decoration:none}.ds-nav a:hover{color:var(--navy,#0a3868)}.ds-pill-wa{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 20px 0 16px;border-radius:999px;background:var(--teal,#117a69);color:#fff;font-weight:600;font-size:.9375rem;text-decoration:none;box-shadow:0 6px 18px -8px rgb(8 39 79 / .45);transition:background-color .2s cubic-bezier(.16,1,.3,1),transform .2s cubic-bezier(.16,1,.3,1)}.ds-pill-wa:hover{background:var(--teal-ink,#0b7068)}.ds-pill-wa:active{transform:scale(.97)}.ds-pill-wa:focus-visible,.ds-nav a:focus-visible{outline:3px solid var(--teal-bright,#55c8b8);outline-offset:3px;border-radius:6px}"
+    },
+    {
+      "name": "Selo de credencial",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Pílula de vidro translúcido sobre a base do retrato, com credencial.",
+      "html": "<div class=\"ds-photo\"><p class=\"ds-badge\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21.4 10.9 12 6 2.6 10.9 12 16l9.4-5.1z\"/><path d=\"M6 13.2V17c2.6 2 9.4 2 12 0v-3.8\"/></svg><span>Especialização<strong>UNICAMP</strong></span></p></div>",
+      "css": ".ds-photo{font-family:'Biryani',system-ui,sans-serif;position:relative;height:160px;border-radius:28px;background:linear-gradient(160deg,#c9d6e3,#8fa6bd);overflow:hidden}.ds-badge{position:absolute;left:24px;bottom:24px;margin:0;display:flex;align-items:center;gap:12px;height:64px;padding:0 22px 0 18px;border-radius:999px;background:rgb(228 242 248 / .88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 8px 22px -14px rgb(8 39 79 / .5);color:var(--navy-ink,#08274f);font-size:.9375rem;line-height:1.3}.ds-badge svg{color:#155466;flex:none}.ds-badge strong{display:block;font-weight:800;font-size:1.12em}"
+    },
+    {
+      "name": "Cartão de depoimento",
+      "kind": "card",
+      "refersTo": "card-review",
+      "description": "Depoimento real em papel com sombra marinho difusa; a variante em destaque é marinho.",
+      "html": "<div class=\"ds-reviews\"><figure class=\"ds-review\"><span class=\"ds-stars\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z\"/></svg><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z\"/></svg><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z\"/></svg><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z\"/></svg><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z\"/></svg></span><blockquote>Explicou tudo com calma e tirou todas as minhas dúvidas.</blockquote><figcaption><strong>Paciente</strong><span>Doctoralia</span></figcaption></figure><figure class=\"ds-review ds-review--lead\"><span class=\"ds-stars\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z\"/></svg><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z\"/></svg><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z\"/></svg><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z\"/></svg><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z\"/></svg></span><blockquote>Atendimento sem pressa, do começo ao fim.</blockquote><figcaption><strong>Paciente</strong><span>Doctoralia</span></figcaption></figure></div>",
+      "css": ".ds-reviews{font-family:'Biryani',system-ui,sans-serif;display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:16px;background:var(--ground,#f6f8fa)}.ds-review{margin:0;padding:24px;border-radius:18px;background:#fff;box-shadow:0 1px 2px rgb(8 39 79 / .06),0 12px 32px -20px rgb(8 39 79 / .25);display:flex;flex-direction:column;gap:14px}.ds-review .ds-stars{display:inline-flex;gap:3px;color:var(--star,#0e9185)}.ds-review blockquote{margin:0;color:var(--ink,#1b2a3e);font-size:1.0625rem;line-height:1.55;flex:1}.ds-review figcaption{display:grid;gap:2px;font-size:.9375rem}.ds-review figcaption strong{color:var(--navy-ink,#08274f)}.ds-review figcaption span{color:var(--ink-2,#44546a)}.ds-review--lead{background:var(--navy,#0a3868)}.ds-review--lead blockquote{color:#fff;font-size:1.375rem;line-height:1.4;font-weight:600;letter-spacing:-0.01em}.ds-review--lead figcaption strong{color:#fff}.ds-review--lead figcaption span{color:var(--on-navy-2,#b9c8da)}.ds-review--lead .ds-stars{color:var(--teal-bright,#55c8b8)}"
+    },
+    {
+      "name": "Faixa marinho curva",
+      "kind": "custom",
+      "refersTo": "band",
+      "description": "Assinatura: faixa marinho com borda superior em elipse, título com filete teal e checks em disco.",
+      "html": "<div class=\"ds-band-wrap\"><section class=\"ds-band\"><h2 class=\"ds-band__title\">Para quem é a consulta</h2><ul class=\"ds-band__list\"><li><span class=\"ds-check\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg></span>Pressão alta</li><li><span class=\"ds-check\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg></span>Check up do coração</li></ul></section></div>",
+      "css": ".ds-band-wrap{font-family:'Biryani',system-ui,sans-serif;background:var(--ground,#f6f8fa);padding-top:40px}.ds-band{position:relative;padding:48px 32px 40px;background:var(--navy,#0a3868);color:var(--on-navy,#f5f7fa)}.ds-band::before{content:'';position:absolute;left:0;right:0;bottom:calc(100% - 1px);height:28px;background:var(--navy,#0a3868);clip-path:ellipse(75% 100% at 50% 100%)}.ds-band__title{display:flex;align-items:center;gap:20px;margin:0;font-size:2rem;font-weight:700;letter-spacing:-0.02em;line-height:1.15}.ds-band__title::before{content:'';width:40px;height:3px;background:var(--teal-bright,#55c8b8);flex:none}.ds-band__list{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:18px}.ds-band__list li{display:flex;align-items:center;gap:14px;font-size:1.1875rem}.ds-check{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--teal-bright,#55c8b8);color:#fff;flex:none}.ds-check svg{width:58%;height:58%}"
+    },
+    {
+      "name": "Item de FAQ",
+      "kind": "custom",
+      "refersTo": "faq-item",
+      "description": "Pergunta em cartão gelo; aberta vira papel com sombra e o painel abre por grid-template-rows.",
+      "html": "<div class=\"ds-faq\"><div class=\"ds-faq__item is-open\"><button aria-expanded=\"true\">Atende Unimed?<svg class=\"ds-faq__icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></button><div class=\"ds-faq__panel\"><div><p>Sim. Também atende particular.</p></div></div></div><div class=\"ds-faq__item\"><button aria-expanded=\"false\">Quanto tempo dura a consulta?<svg class=\"ds-faq__icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></button><div class=\"ds-faq__panel\"><div><p>O tempo que for preciso.</p></div></div></div></div>",
+      "css": ".ds-faq{font-family:'Biryani',system-ui,sans-serif;display:grid;gap:12px;padding:16px;background:#fff}.ds-faq__item{border-radius:16px;background:var(--ground,#f6f8fa);transition:background-color .25s cubic-bezier(.16,1,.3,1),box-shadow .25s cubic-bezier(.16,1,.3,1)}.ds-faq__item.is-open{background:#fff;box-shadow:0 1px 2px rgb(8 39 79 / .06),0 14px 36px -22px rgb(8 39 79 / .35)}.ds-faq__item button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 20px 20px 22px;border:0;border-radius:16px;background:none;font:inherit;font-size:1.0625rem;font-weight:600;color:var(--navy-ink,#08274f);text-align:left;cursor:pointer}.ds-faq__item button:focus-visible{outline:3px solid var(--teal-bright,#55c8b8);outline-offset:3px}.ds-faq__icon{flex:none;width:22px;height:22px;color:var(--teal,#117a69);transition:transform .35s cubic-bezier(.16,1,.3,1)}.is-open .ds-faq__icon{transform:rotate(45deg)}.ds-faq__panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s cubic-bezier(.16,1,.3,1)}.is-open .ds-faq__panel{grid-template-rows:1fr}.ds-faq__panel>div{overflow:hidden}.ds-faq__panel p{margin:0;padding:0 22px 22px;color:var(--ink-2,#44546a)}"
+    },
+    {
+      "name": "Linha de serviço",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "Serviço entre filetes, com seta teal diagonal; no hover ganha papel e recua.",
+      "html": "<ul class=\"ds-svcs\"><li><a class=\"ds-svc\" href=\"#\"><span class=\"ds-svc__body\"><span class=\"ds-svc__title\">Risco cirúrgico</span><span class=\"ds-svc__text\">Avaliação antes de uma cirurgia.</span></span><svg class=\"ds-svc__go\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a></li></ul>",
+      "css": ".ds-svcs{font-family:'Biryani',system-ui,sans-serif;list-style:none;margin:0;padding:0 16px;background:var(--ground,#f6f8fa);border-top:1px solid var(--rule,#d7dfe8)}.ds-svcs li{border-bottom:1px solid var(--rule,#d7dfe8)}.ds-svc{display:flex;align-items:flex-start;gap:16px;padding:18px 6px 18px 0;border-radius:10px;text-decoration:none;transition:background-color .2s cubic-bezier(.16,1,.3,1),padding .25s cubic-bezier(.16,1,.3,1)}.ds-svc__body{flex:1;display:grid;gap:4px}.ds-svc__title{font-weight:700;font-size:1.1875rem;color:var(--navy-ink,#08274f);line-height:1.3}.ds-svc__text{color:var(--ink,#1b2a3e);font-size:1rem;line-height:1.5}.ds-svc__go{flex:none;width:22px;height:22px;margin-top:3px;color:var(--teal,#117a69);transition:transform .25s cubic-bezier(.16,1,.3,1)}.ds-svc:hover{background:#fff;padding-left:12px}.ds-svc:hover .ds-svc__go{transform:translate(2px,-2px)}.ds-svc:focus-visible{outline:3px solid var(--teal-bright,#55c8b8);outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "O consultório de porta aberta",
+    "overview": "O sistema é o padrão de site de médico, executado com acabamento: chão branco e cinza-frio claríssimo, azul-marinho profundo para manchetes, ação e faixas inteiras de seção, e um teal contido que só aparece em estrelas, checks, ícones de localização e na pílula do WhatsApp. A médica abre a página: o retrato real, grande e próximo, é a prova, e tudo o mais (manchete, botão, nota 5,0) vem logo abaixo dela, em ordem de confiança.\n\nA densidade é calma e legível para um paciente 40+ no celular: texto de corpo a 17px com entrelinha 1,6, linhas curtas (36 a 64ch), muito ar entre seções. A tipografia é uma única sans clara, Biryani, que fala em peso normal e destaca as palavras-chave em negrito dentro da própria frase. A forma é macia e confiante: pílulas para toda ação, cartões com cantos generosos, uma faixa marinho com borda superior curva marcando a passagem do retrato para o conteúdo.\n\nO sistema recusa a página de clínica com ícones em grade e azul hospitalar saturado, e recusa rótulos-sobrelinha (kickers) acima de títulos: cada seção começa direto pela manchete.",
+    "keyCharacteristics": [
+      "Chão claro e frio, marinho como cor de voz e de ação, teal só como sinal.",
+      "Biryani 400 com palavras-chave em 700 na mesma linha.",
+      "Toda ação é pílula marinho com ícone e seta, sempre seguida da nota 5,0.",
+      "Retrato real da médica como peça principal, com selos em vidro translúcido sobre a foto.",
+      "Faixa marinho de borda curva como transição de seção assinatura.",
+      "Movimento mínimo: uma chegada no hero, a barra fixa no celular, o FAQ que abre por altura."
+    ],
+    "rules": [
+      {
+        "name": "The Teal Is a Signal Rule",
+        "body": "Teal nunca pinta superfície nem manchete. Ele marca estrela, check, seta, pino e a pílula do WhatsApp; tudo o que é título, faixa ou ação principal é marinho.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Tone Night Rule",
+        "body": "Faixas escuras usam apenas a família marinho (`navy`, `navy-deep`, `navy-night`); nunca preto, nunca cinza. Duas faixas escuras vizinhas se separam por degrau de marinho, não por linha.",
+        "section": "colors"
+      },
+      {
+        "name": "The Bold Keyword Rule",
+        "body": "Manchetes são escritas em peso 400 e só as palavras que carregam o argumento vão em 700 (`<b>`), dentro da mesma frase. Nunca a manchete inteira em negrito, salvo o título da faixa.",
+        "section": "typography"
+      },
+      {
+        "name": "The Headline-First Rule",
+        "body": "Nenhuma seção tem rótulo-sobrelinha (kicker/eyebrow) acima do título. A seção abre pela manchete; contexto vai num parágrafo abaixo dela.",
+        "section": "typography"
+      },
+      {
+        "name": "The Navy Shadow Rule",
+        "body": "Toda sombra é tingida de marinho e espalhada, com spread negativo. Sombra dura, deslocada ou preta não pertence a este mundo.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** usar marinho (`navy`) para toda ação principal e para faixas inteiras, e `navy-ink` para manchetes sobre claro.",
+      "**Do** escrever manchetes em Biryani 400 com só as palavras-chave em 700.",
+      "**Do** fazer toda ação em pílula completa com ícone do WhatsApp e seta, seguida da nota 5,0.",
+      "**Do** tingir toda sombra de marinho (`rgb(8 39 79 / …)`), difusa e com spread negativo.",
+      "**Do** manter o retrato real da médica como primeira imagem, com selos de credencial em vidro translúcido sobre a foto.",
+      "**Do** abrir a transição do hero para o conteúdo com a faixa marinho de borda curva.",
+      "**Do** limitar o movimento a uma chegada no hero, à barra fixa do celular e ao FAQ, e respeitar `prefers-reduced-motion`.",
+      "**Do** usar a pílula do WhatsApp do topo em `teal`, mais escuro que o teal da comp, com hover em `teal-ink`."
+    ],
+    "donts": [
+      "**Don't** colocar rótulo-sobrelinha (kicker/eyebrow) acima de títulos de seção.",
+      "**Don't** usar teal em superfícies, manchetes ou no botão principal; ele é só sinal.",
+      "**Don't** usar `teal-bright` sobre fundo claro; ele existe para as superfícies marinho.",
+      "**Don't** usar sombra preta, dura ou deslocada, nem cantos retos em ações.",
+      "**Don't** montar grade de ícones de especialidade nem azul hospitalar saturado.",
+      "**Don't** trocar de família tipográfica para hierarquia; Biryani faz tudo."
+    ]
+  }
+}
