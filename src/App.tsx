@@ -1,194 +1,267 @@
-import { CalendarCheck, HeartPulse, Activity, Stethoscope, ClipboardCheck, Dumbbell, Scissors, RotateCcw, Gauge, MapPin, Star, GraduationCap, ShieldCheck, Wallet, ArrowRight } from 'lucide-react'
+import { ArrowUpRight, ArrowRight, Star } from 'lucide-react'
 import BookingDemo from './BookingDemo'
+import { useReveal } from './useReveal'
 
 const BOOK_URL = 'https://www.doctoralia.com.br/perfil/thamyris-dahas-daher#profile-pricing'
 const REVIEWS_URL = 'https://www.doctoralia.com.br/perfil/thamyris-dahas-daher#profile-reviews'
-const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Avenida do Estado Dalmo Vieira, 871, Centro, Balneário Camboriú, SC, 88331-490')
+const ADDRESS = 'Avenida do Estado Dalmo Vieira, 871, Centro, Balneário Camboriú, SC, 88331-490'
+const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(ADDRESS)
 
-const services = [
-  { icon: Stethoscope, title: 'Consulta cardiológica', text: 'Avaliação completa do coração, da história clínica aos exames.' },
-  { icon: Activity, title: 'ECG (eletrocardiograma)', text: 'Registro da atividade elétrica do coração, feito no consultório.' },
-  { icon: Scissors, title: 'Avaliação do risco cirúrgico', text: 'Segurança cardiovascular antes de qualquer procedimento.' },
-  { icon: ClipboardCheck, title: 'Avaliação pré-operatória', text: 'Laudo e orientações para você chegar preparado à cirurgia.' },
-  { icon: Dumbbell, title: 'Avaliação para esportes', text: 'Liberação para atividade física com acompanhamento seguro.' },
-  { icon: HeartPulse, title: 'Check up', text: 'Panorama da sua saúde cardiovascular e metabólica.' },
-  { icon: ShieldCheck, title: 'Prevenção cardiovascular', text: 'Controle de fatores de risco antes que virem doença.' },
-  { icon: Gauge, title: 'Tratamento para hipertensão', text: 'Pressão sob controle, com plano individual e acompanhamento.' },
-  { icon: RotateCcw, title: 'Retorno de consultas', text: 'Revisão de exames e ajuste do tratamento.' },
+const serviceGroups = [
+  {
+    label: 'Consultas',
+    items: [
+      { title: 'Consulta cardiológica', text: 'Avaliação completa do coração, da história clínica aos exames.' },
+      { title: 'ECG (eletrocardiograma)', text: 'Registro da atividade elétrica do coração, no próprio consultório.' },
+      { title: 'Retorno de consultas', text: 'Revisão de exames e ajuste do tratamento.' },
+    ],
+  },
+  {
+    label: 'Avaliações',
+    items: [
+      { title: 'Risco cirúrgico', text: 'Segurança cardiovascular antes de qualquer procedimento.' },
+      { title: 'Pré-operatório', text: 'Laudo e orientações para chegar preparado à cirurgia.' },
+      { title: 'Avaliação para esportes', text: 'Liberação para atividade física com segurança.' },
+    ],
+  },
+  {
+    label: 'Cuidado contínuo',
+    items: [
+      { title: 'Check up', text: 'Panorama da saúde cardiovascular e metabólica.' },
+      { title: 'Prevenção cardiovascular', text: 'Controle dos fatores de risco antes que virem doença.' },
+      { title: 'Tratamento da hipertensão', text: 'Pressão sob controle, com plano individual e acompanhamento.' },
+    ],
+  },
 ]
 
+const featured = {
+  name: 'Thatiane Thieme',
+  service: 'Consulta Cardiologia',
+  text: 'Muito atenciosa, detalhista nas explicações e clara nas orientações.',
+}
+
 const reviews = [
-  { name: 'Thatiane Thieme', service: 'Consulta Cardiologia', date: 'jul. 2025', text: 'Dra. Thamyres é uma excelente profissional! Muito atenciosa, detalhista nas explicações e clara nas orientações.' },
   { name: 'Rodrigo', service: 'Check up', date: 'set. 2025', text: 'Muito educada, atenciosa e humana. Tirou todas as minhas dúvidas.' },
-  { name: 'Maria Elair Garcia', service: 'Consulta Cardiologia', date: 'jul. 2025', text: 'Dra Thamyris, é uma excelente profissional, superindico, atendimento excelente, explica tudo com detalhes, adorei!' },
-  { name: 'Jéssica L.', service: 'Avaliação do risco cirúrgico', date: 'ago. 2025', text: 'Ótimo atendimento objetivo, confortável, explicativo. Muito grata por toda atenção da Dra. Thamyris.' },
+  { name: 'Jéssica L.', service: 'Risco cirúrgico', date: 'ago. 2025', text: 'Ótimo atendimento objetivo, confortável, explicativo. Muito grata por toda atenção da Dra. Thamyris.' },
+  { name: 'Maria Elair Garcia', service: 'Consulta Cardiologia', date: 'jul. 2025', text: 'Excelente profissional, superindico, atendimento excelente, explica tudo com detalhes, adorei!' },
   { name: 'Grasi Gris', service: 'Consulta Cardiologia', date: 'jul. 2025', text: 'Fiquei impressionada com a atenção e carinho, me surpreendeu!' },
-  { name: 'Andrea', service: 'Avaliação do risco cirúrgico', date: 'jul. 2025', text: 'Consulta objetiva, médica atenciosa em vários aspectos.' },
 ]
 
 const education = [
-  { year: '2013', title: 'Medicina', place: 'Universidade de Cuiabá (UNIC)' },
-  { year: '', title: 'Residência em Clínica Médica', place: 'Secretaria Municipal de Saúde de São Paulo' },
-  { year: '', title: 'Especialização em Cardiologia', place: 'Universidade Estadual de Campinas (UNICAMP)' },
-  { year: '2018', title: 'Atuação em Balneário Camboriú', place: 'Atendimento na região desde 2018' },
+  { when: '2013', title: 'Graduação em Medicina', place: 'Universidade de Cuiabá' },
+  { when: 'Residência', title: 'Clínica Médica', place: 'Secretaria Municipal de Saúde de São Paulo' },
+  { when: 'Especialização', title: 'Cardiologia', place: 'UNICAMP' },
+  { when: 'Desde 2018', title: 'Atendimento em Balneário Camboriú', place: 'Cebrale, Centro' },
 ]
 
-function Stars() {
+/** O fio de ECG: uma linha só, desenhada uma vez. */
+function Pulse({ className }: { className?: string }) {
+  return (
+    <svg className={`pulse ${className ?? ''}`} viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden>
+      <path
+        pathLength={1}
+        d="M0 48 H520 l14 0 l10 -10 l10 10 l12 0 l8 14 l16 -58 l16 74 l10 -30 l12 0 l14 -8 l16 8 H1200"
+      />
+    </svg>
+  )
+}
+
+function Stars({ size = 16 }: { size?: number }) {
   return (
     <span className="stars" aria-label="5 de 5 estrelas">
       {Array.from({ length: 5 }, (_, i) => (
-        <Star key={i} size={16} fill="currentColor" strokeWidth={0} />
+        <Star key={i} size={size} fill="currentColor" strokeWidth={0} />
       ))}
     </span>
   )
 }
 
 export default function App() {
+  useReveal()
   return (
     <>
       <header className="nav">
-        <div className="container nav__inner">
-          <a href="#topo" className="brand">
-            <span className="brand__name">Dra. Thamyris Dahas Daher</span>
-            <span className="brand__role">Cardiologista</span>
+        <div className="wrap nav__inner">
+          <a href="#topo" className="brand" aria-label="Início">
+            Dra. Thamyris Dahas Daher
           </a>
           <nav className="nav__links" aria-label="Seções">
             <a href="#servicos">Serviços</a>
             <a href="#sobre">Sobre</a>
             <a href="#avaliacoes">Avaliações</a>
-            <a href="#local">Local</a>
+            <a href="#local">Endereço</a>
           </nav>
-          <a className="btn btn--sm btn--primary" href={BOOK_URL} target="_blank" rel="noreferrer">
+          <a className="btn btn--primary btn--sm" href={BOOK_URL} target="_blank" rel="noreferrer">
             Agendar
           </a>
         </div>
       </header>
 
       <main id="topo">
+        {/* HERO */}
         <section className="hero">
-          <div className="container hero__grid">
+          <div className="wrap hero__grid">
             <div className="hero__copy">
-              <p className="eyebrow">Cardiologia · Balneário Camboriú</p>
-              <h1>Cuidado do coração com escuta, tempo e evidência.</h1>
-              <p className="lead">
-                Consultas de cardiologia, check up, avaliação de risco cirúrgico e acompanhamento de hipertensão, com atendimento humanizado e baseado em evidências.
+              <p className="kicker reveal">Cardiologista · Balneário Camboriú</p>
+              <h1 className="reveal" style={{ ['--d' as string]: '80ms' }}>
+                Um coração bem cuidado começa com uma <em>boa conversa.</em>
+              </h1>
+              <p className="lead reveal" style={{ ['--d' as string]: '160ms' }}>
+                Consultas sem pressa, explicações claras e um plano feito para você. Check up, hipertensão, risco cirúrgico e avaliação para esportes.
               </p>
-              <div className="hero__actions">
-                <a className="btn btn--lg btn--primary" href={BOOK_URL} target="_blank" rel="noreferrer">
-                  <CalendarCheck size={20} /> Agendar consulta
+              <div className="actions reveal" style={{ ['--d' as string]: '240ms' }}>
+                <a className="btn btn--primary" href={BOOK_URL} target="_blank" rel="noreferrer">
+                  Agendar consulta <ArrowRight size={20} />
                 </a>
-                <a className="btn btn--lg btn--ghost" href="#servicos">
+                <a className="link" href="#servicos">
                   Ver serviços
                 </a>
               </div>
-              <a className="rating" href={REVIEWS_URL} target="_blank" rel="noreferrer">
-                <Stars />
-                <span>
-                  <strong>5,0</strong> · 85 avaliações no Doctoralia
-                </span>
-              </a>
             </div>
-            <figure className="hero__photo">
-              <img src="/dra-thamyris.jpeg" alt="Dra. Thamyris Dahas Daher, cardiologista" width={500} height={500} />
-              <figcaption className="credential">
-                <span className="credential__label">Registro</span>
-                <span className="credential__value">CRM SC 26991 · RQE 17108</span>
-              </figcaption>
+
+            <figure className="hero__figure">
+              <img src="/dra-thamyris.jpeg" alt="Dra. Thamyris Dahas Daher sorrindo, de jaleco branco" width={500} height={500} />
             </figure>
+
+            <dl className="hero__facts reveal" style={{ ['--d' as string]: '320ms' }}>
+              <div>
+                <dt>Avaliação no Doctoralia</dt>
+                <dd>
+                  <a href={REVIEWS_URL} target="_blank" rel="noreferrer" className="fact-link">
+                    <span className="fact-num">5,0</span> <Stars size={14} />
+                  </a>
+                  <span className="fact-sub">85 opiniões de pacientes</span>
+                </dd>
+              </div>
+              <div>
+                <dt>Registro</dt>
+                <dd>
+                  <span className="fact-num fact-num--sm">CRM SC 26991</span>
+                  <span className="fact-sub">RQE 17108</span>
+                </dd>
+              </div>
+              <div>
+                <dt>Convênio</dt>
+                <dd>
+                  <span className="fact-num fact-num--sm">Unimed</span>
+                  <span className="fact-sub">e particular</span>
+                </dd>
+              </div>
+            </dl>
           </div>
+          <Pulse className="hero__pulse" />
         </section>
 
+        {/* SERVIÇOS */}
         <section id="servicos" className="section">
-          <div className="container">
-            <div className="section__head">
-              <p className="eyebrow">Serviços</p>
-              <h2>Do check up ao pré-operatório</h2>
-              <p className="section__sub">Valores sob consulta. Atende Unimed e particular.</p>
-            </div>
+          <div className="wrap">
+            <header className="sec-head reveal">
+              <span className="sec-num">01</span>
+              <h2>Serviços</h2>
+              <p className="sec-sub">Do primeiro check up ao acompanhamento de longo prazo. Valores sob consulta.</p>
+            </header>
             <div className="services">
-              {services.map(({ icon: I, title, text }) => (
-                <article key={title} className="card service">
-                  <span className="service__icon">
-                    <I size={20} />
-                  </span>
-                  <div className="stack-8">
-                    <h3>{title}</h3>
-                    <p>{text}</p>
-                  </div>
-                </article>
+              {serviceGroups.map((g) => (
+                <div key={g.label} className="svc-group reveal">
+                  <h3 className="svc-group__label">{g.label}</h3>
+                  <ul>
+                    {g.items.map((s) => (
+                      <li key={s.title} className="svc">
+                        <span className="svc__title">{s.title}</span>
+                        <span className="svc__text">{s.text}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="section section--tint">
-          <div className="container split">
-            <div className="split__copy">
-              <p className="eyebrow">Agendamento</p>
-              <h2>Marcar uma consulta é rápido</h2>
-              <p className="section__sub">Escolha o serviço, o horário que cabe na sua semana e receba a confirmação no celular.</p>
-              <ol className="steps">
-                <li><span>1</span>Escolha o serviço</li>
-                <li><span>2</span>Combine o melhor horário</li>
-                <li><span>3</span>Receba a confirmação</li>
-              </ol>
-              <a className="btn btn--lg btn--primary" href={BOOK_URL} target="_blank" rel="noreferrer">
-                Agendar agora <ArrowRight size={20} />
-              </a>
-            </div>
-            <div className="split__demo" id="demo">
-              <BookingDemo />
-            </div>
+        {/* CITAÇÃO */}
+        <section className="quote-band" aria-label="Depoimento em destaque">
+          <div className="wrap quote-band__inner reveal">
+            <Stars size={20} />
+            <blockquote>“{featured.text}”</blockquote>
+            <p className="quote-band__by">
+              {featured.name} <span>· {featured.service}, via Doctoralia</span>
+            </p>
           </div>
         </section>
 
+        {/* SOBRE */}
         <section id="sobre" className="section">
-          <div className="container split split--top">
-            <div className="split__copy">
-              <p className="eyebrow">Sobre</p>
-              <h2>Medicina feita com atenção aos detalhes</h2>
-              <p className="section__sub">
-                Médica formada em 2013, com residência em Clínica Médica e especialização em Cardiologia. Atua em Balneário Camboriú desde 2018, com foco em prevenção, hipertensão e dislipidemias, avaliação para atividade física, reabilitação cardiovascular e saúde metabólica.
+          <div className="wrap about">
+            <header className="sec-head reveal">
+              <span className="sec-num">02</span>
+              <h2>Sobre a médica</h2>
+            </header>
+            <div className="about__body reveal">
+              <p className="about__lede">
+                Formada em 2013, com residência em Clínica Médica em São Paulo e especialização em Cardiologia pela UNICAMP.
+              </p>
+              <p>
+                Atende em Balneário Camboriú desde 2018, com foco em prevenção, hipertensão e dislipidemias, avaliação para atividade física, reabilitação cardiovascular e saúde metabólica. O cuidado é humanizado e baseado em evidências: cada decisão é explicada, sem pressa.
               </p>
             </div>
-            <ol className="timeline">
+            <ol className="timeline reveal">
               {education.map((e) => (
                 <li key={e.title}>
-                  <span className="timeline__dot"><GraduationCap size={16} /></span>
-                  <div className="stack-4">
-                    {e.year && <span className="timeline__year">{e.year}</span>}
+                  <span className="timeline__when">{e.when}</span>
+                  <span className="timeline__what">
                     <strong>{e.title}</strong>
-                    <span className="muted">{e.place}</span>
-                  </div>
+                    <span>{e.place}</span>
+                  </span>
                 </li>
               ))}
             </ol>
           </div>
         </section>
 
-        <section id="avaliacoes" className="section section--tint">
-          <div className="container">
-            <div className="section__head section__head--row">
-              <div className="stack-8">
-                <p className="eyebrow">Avaliações</p>
-                <h2>O que dizem os pacientes</h2>
+        {/* AGENDAMENTO */}
+        <section className="booking">
+          <div className="wrap booking__grid">
+            <div className="booking__copy reveal">
+              <span className="sec-num sec-num--light">03</span>
+              <h2>Agendar é simples</h2>
+              <ol className="steps">
+                <li><span>1</span><div><strong>Escolha o serviço</strong><p>Consulta, check up ou avaliação.</p></div></li>
+                <li><span>2</span><div><strong>Combine o horário</strong><p>O que couber na sua semana.</p></div></li>
+                <li><span>3</span><div><strong>Receba a confirmação</strong><p>Direto no seu celular.</p></div></li>
+              </ol>
+              <a className="btn btn--light" href={BOOK_URL} target="_blank" rel="noreferrer">
+                Ver horários disponíveis <ArrowUpRight size={20} />
+              </a>
+            </div>
+            <div className="booking__demo" id="demo">
+              <BookingDemo />
+            </div>
+          </div>
+        </section>
+
+        {/* AVALIAÇÕES */}
+        <section id="avaliacoes" className="section">
+          <div className="wrap">
+            <header className="sec-head sec-head--split reveal">
+              <div className="sec-head__title">
+                <span className="sec-num">04</span>
+                <h2>Pacientes</h2>
               </div>
               <a className="score" href={REVIEWS_URL} target="_blank" rel="noreferrer">
                 <span className="score__num">5,0</span>
-                <span className="stack-4">
+                <span className="score__meta">
                   <Stars />
-                  <span className="muted">85 opiniões no Doctoralia</span>
+                  <span>85 opiniões no Doctoralia <ArrowUpRight size={14} /></span>
                 </span>
               </a>
-            </div>
+            </header>
             <div className="reviews">
               {reviews.map((r) => (
-                <figure key={r.name} className="card review">
-                  <Stars />
+                <figure key={r.name} className="review reveal">
                   <blockquote>“{r.text}”</blockquote>
                   <figcaption>
                     <strong>{r.name}</strong>
-                    <span className="muted">{r.service} · {r.date}</span>
+                    <span>{r.service} · {r.date}</span>
                   </figcaption>
                 </figure>
               ))}
@@ -196,24 +269,36 @@ export default function App() {
           </div>
         </section>
 
-        <section id="local" className="section">
-          <div className="container split split--top">
-            <div className="split__copy">
-              <p className="eyebrow">Onde atende</p>
-              <h2>Centro de Balneário Camboriú</h2>
-              <ul className="facts">
-                <li><MapPin size={20} /><span><strong>Cebrale</strong><br />Avenida do Estado Dalmo Vieira, 871, Centro<br />Balneário Camboriú · SC · 88331-490</span></li>
-                <li><ShieldCheck size={20} /><span><strong>Convênio</strong><br />Unimed e particular</span></li>
-                <li><Wallet size={20} /><span><strong>Pagamento</strong><br />PIX e dinheiro</span></li>
-              </ul>
-              <div className="hero__actions">
-                <a className="btn btn--lg btn--primary" href={BOOK_URL} target="_blank" rel="noreferrer">Agendar consulta</a>
-                <a className="btn btn--lg btn--ghost" href={MAPS_URL} target="_blank" rel="noreferrer">Abrir no mapa</a>
+        {/* LOCAL */}
+        <section id="local" className="section section--last">
+          <div className="wrap place">
+            <div className="place__copy reveal">
+              <span className="sec-num">05</span>
+              <h2>Onde atende</h2>
+              <address>
+                <strong>Cebrale</strong>
+                Avenida do Estado Dalmo Vieira, 871
+                <br />
+                Centro, Balneário Camboriú · SC
+                <br />
+                CEP 88331-490
+              </address>
+              <dl className="place__meta">
+                <div><dt>Convênio</dt><dd>Unimed e particular</dd></div>
+                <div><dt>Pagamento</dt><dd>PIX e dinheiro</dd></div>
+              </dl>
+              <div className="actions">
+                <a className="btn btn--primary" href={BOOK_URL} target="_blank" rel="noreferrer">
+                  Agendar consulta <ArrowRight size={20} />
+                </a>
+                <a className="link" href={MAPS_URL} target="_blank" rel="noreferrer">
+                  Como chegar
+                </a>
               </div>
             </div>
-            <div className="map card">
+            <div className="place__map reveal">
               <iframe
-                title="Mapa do consultório"
+                title="Mapa: Avenida do Estado Dalmo Vieira, 871, Balneário Camboriú"
                 loading="lazy"
                 src={'https://www.google.com/maps?q=' + encodeURIComponent('Avenida do Estado Dalmo Vieira, 871, Balneário Camboriú') + '&output=embed'}
               />
@@ -223,12 +308,11 @@ export default function App() {
       </main>
 
       <footer className="footer">
-        <div className="container footer__inner">
-          <div className="stack-4">
-            <strong>Dra. Thamyris Dahas Daher</strong>
-            <span>Cardiologista · CRM SC 26991 · RQE 17108</span>
-          </div>
-          <span>Prévia de site · Balneário Camboriú, SC</span>
+        <Pulse className="footer__pulse" />
+        <div className="wrap footer__inner">
+          <p className="footer__name">Dra. Thamyris Dahas Daher</p>
+          <p>Cardiologista · CRM SC 26991 · RQE 17108</p>
+          <p className="footer__note">Prévia de site. Informações do perfil público no Doctoralia.</p>
         </div>
       </footer>
     </>
